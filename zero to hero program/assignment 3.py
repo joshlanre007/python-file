@@ -1,6 +1,6 @@
-#Write a Python program that computes the greatest common divisor (GCD) of two positive integers
+# Write a Python program to convert height (in feet and inches) to centimeters
 
-a = int(input("Enter first positive integer: "))
-b = int(input("Enter second positive integer: "))
-GCD = (a,b) 
-print("GCD =", (a,b))
+feet = int(input("Enter height (feet): "))
+inches = int(input("Enter remaining inches: "))
+centimeters= (feet * 12 + inches) * 2.54
+print("Height in cm:", centimeters)
