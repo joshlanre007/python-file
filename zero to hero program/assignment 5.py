@@ -8,7 +8,7 @@ total_bill = float(input("Enter the total bill amoumt: #"))
 if total_bill > 100:
     discount = total_bill * 0.10
     final_amount = total_bill - discount
-    print(f"A 10% discount applies. Final amount to be paid: ${final_amount:.2f}")
+    print(f"A 10% discount applies. Final amount to be paid: #{final_amount:.2f}")
 else:
     final_amount = total_bill
-    print(f"No discount applies. Final amount to be paid: ${final_amount:.2f}")
+    print(f"No discount applies. Final amount to be paid: #{final_amount:.2f}")
