@@ -93,28 +93,18 @@ except ValueError:
     """
     # Write a Python program to calculate the hypotenuse of a right angled triangle
 """
-import math
+first_number = int(input("Enter the first side of the triangle: "))
+second_number = int(input("Enter the second side of the triangle: "))
 
-def calculate_hypotenuse(a, b):
-    return math.sqrt(a**2 + b**2)
+hypotenuse = (((first_number ** 2) + (second_number ** 2)) ** 0.5)
 
-try:
-    side_a = float(input("Enter the length of the first leg (a): "))
-    side_b = float(input("Enter the length of the second leg (b): "))
-
-    if side_a <= 0 or side_b <= 0:
-        print("Both side lengths must be positive numbers.")
-    else:
-        hypotenuse = calculate_hypotenuse(side_a, side_b)
-        print(f"The length of the hypotenuse is: {hypotenuse:.2f}")
-except ValueError:
-    print("Invalid input! Please enter valid numerical values.")
+print(f'The hypotenuse of the right angled triangle is {hypotenuse}')
 
 
-    """
+"""
 # Prompt for a number. Print whether it's Positive Negative Zero
     """
-    
+
 number = int(input("Enter any number: "))
 
 if number > 0:
@@ -125,3 +115,94 @@ elif number == 0:
 
 else:
     print(f'The number is negative {number}')
+
+"""
+#Prompt the user to enter their score and:
+#print grade A (90-100), B (80-89), C (70-79), F (below 70)
+"""
+
+Score = int(input("Enter your score: "))
+
+if Score >= 90 and Score <= 100:
+    print(f'Grade A')
+
+elif Score >= 80 and Score <= 89:
+    print(f'Grade B')
+
+elif Score >= 70 and Score <= 79:
+    print(f'Grade C')
+
+else:
+    print(f'Grade F')
+
+"""
+ #Write a Python program to parse a string to float or integer.
+ """
+
+enter_value = float(input("Enter a number: "))
+
+print(enter_value) #This will automatically convert the input to float if it contains a decimal point.
+print(type(enter_value)) #This will show the datatype of the variable
+
+"""
+# Write a program that asks for the user's name and their favorite color
+# Then,use string interpolation to create a personalized greeting
+"""
+
+name = input("Enter your name: ")
+favourite_color = input("Enter your favourite color: ")
+print(f'Hello {name}, your favourite color is {favourite_color}!')
+
+"""
+#write a Python program to check if a triangle is equilateral, isosceles or scalene.Note :
+#An equilateral triangle is a triangle in which all three sides are equal.
+#A scalene triangle is a triangle that has three unequal sides.
+#An isosceles triangle is a triangle with (at least) two equal sides
+"""
+
+# Input sides
+a = float(input("Enter side 1: "))
+b = float(input("Enter side 2: "))
+c = float(input("Enter side 3: "))
+
+def triangle_type(a, b, c):
+    # Check if it's a valid triangle
+    if a + b <= c or a + c <= b or b + c <= a:
+        return "Not a valid triangle!"
+    
+    # Check the type
+    if a == b == c:
+        return "Equilateral"
+    elif a == b or b == c or a == c:
+        return "Isosceles"
+    else:
+        return "Scalene"
+
+# Get and print the result
+result = triangle_type(a, b, c)
+print(f"The triangle is: {result}")
+
+"""
+#Write a Python program that reads two integers representing a month andday and prints the season for that month and day.
+#Expected Output:
+#Input the month (e.g. January, February etc.): july
+#Input the day: 31
+#Season is harmattan
+"""
+def get_season(month, day):
+    if month in ["April", "May", "June", "July", "August", "September"]:
+        return 'Rainy Season'
+    elif month in ["November", "December", "January", "February", "March"]:
+        return 'Harmattan (Dry Season)'
+    elif month == "October":
+        return 'Transition (End of Rainy Season)'
+    else:
+        return 'Invalid month'
+
+# Input and execution (outside the function!)
+month = input("Input the month (e.g. January, February etc.): ").strip().title()  # .title() for consistency
+day = int(input("Input the day: "))
+
+season = get_season(month, day)
+print(f'Season is {season}')
+
