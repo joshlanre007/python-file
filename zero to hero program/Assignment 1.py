@@ -206,3 +206,47 @@ day = int(input("Input the day: "))
 season = get_season(month, day)
 print(f'Season is {season}')
 
+"""
+# Write a program that takes three numbers as input and prints the largest one using if-elif-else. 
+"""
+
+
+number_1 = int(input("Enter the first number: "))
+number_2 = int(input("Enter the second number: "))
+number_3 = int(input("Enter the third number: "))
+
+maximum_number = max(number_1,number_2,number_3)
+
+if maximum_number > 0:
+    print(f'The largest number is {maximum_number}')
+
+else:
+    print(f'There is no largest number')
+
+"""
+# Write a Python program to check the validity of passwords input by users.
+# Validation:
+# At least 1 letter between [a-z] and 1 letter between [A-Z].
+# At least 1 number between [0-9].
+# At least 1 character from [$#@].
+# Minimum length 6 characters.
+# Maximum length 16 characters.
+"""
+
+def validate_password(password):
+    if len(password) < 6 or len(password) > 16:
+        return False
+    
+    has_lower = any(char.islower() for char in password)
+    has_upper = any(char.isupper() for char in password)
+    has_digit = any(char.isdigit() for char in password)
+    has_special = any(char in {'$', '#', '@'} for char in password)
+    
+    return {has_lower} and {has_upper} and {has_digit} and {has_special}
+
+# Test the function
+password = input("Enter password: ")
+if validate_password(password):
+    print("Password is valid!")
+else:
+    print("Password is invalid!")
