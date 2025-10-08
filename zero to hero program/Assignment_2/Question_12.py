@@ -1,7 +1,10 @@
-# Write a program that asks for the user's name and their favorite color
-# Then,use string interpolation to create a personalized greeting
-
-
-name = input("Enter your name: ")
-favourite_color = input("Enter your favourite color: ")
-print(f'Hello {name}, your favourite color is {favourite_color}!')
+#control structures(iteration)
+#Write a program to print fruits from a list using for loop.
+#fruits = ["apple", "banana", "rice", "date", "mango"]
+#for fruit in fruits:
+  #  print(fruit)
+#for alphabet in "tommy":
+#        print("found m")
+  #  else:
+   #    print("not found m")
+#while loop

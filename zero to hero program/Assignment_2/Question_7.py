@@ -1,8 +1,35 @@
-  # Write a Python program to calculate the hypotenuse of a right angled triangle
+#
 
-first_number = int(input("Enter the first side of the triangle: "))
-second_number = int(input("Enter the second side of the triangle: "))
+    #oop with file handling
+import json
 
-hypotenuse = (((first_number ** 2) + (second_number ** 2)) ** 0.5)
+class student:
+    def __init__(self, name, age, student_class):
+        self.name = name
+        self.age = age
+        self.student_class = student_class
 
-print(f'The hypotenuse of the right angled triangle is {hypotenuse}')
+        @classmethod
+        def from_dict(cls, data):
+            return cls(data['name'], data['age'], data['student_class'])
+        
+        def save_to_file(self, filename):
+            with open(filename, 'w') as f:
+                json.dump(self.__dict__, f)
+
+ 
+
+
+
+
+               
+
+              
+    
+
+
+
+
+
+      
+    
